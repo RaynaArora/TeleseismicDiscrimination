@@ -1,10 +1,10 @@
 # ijcai21_data
 Dataset used for Deep Learning Approaches for Teleseismic Discrimination and its Societal Implications
 
-This repository contains the training, validation, and test datasets in Pandas dataframes that have been pickled. The training data is split into 8 files: trainaa, trainab, ... trainag.
+This repository contains the training, validation, and test datasets in Pandas dataframes that have been pickled. The training data is split into 8 files: trainaa, trainab, ..., trainag.
 After you download the data, combine the training files into a single pickle file:
 
-    cat traina* > train.pic
+    cat traina* > train_info.pic
 
 Below is the python code to unpickle the file.
 ```python
@@ -38,3 +38,17 @@ Here are descriptions of the columns in the Pandas dataframes in order:
 - Is explosion: True if this event was an explosion, false if it was an earthquake. Explosions in this dataset include nuclear explosions, chemical explosions, and mining explosions.
 - SampRate: Please ignore this. All waveforms have been downsampled to 20 Hz.
 - Samples: Length 1800 array of amplitudes in waveform from 10 seconds before to 80 seconds after arrival at station. Sampled at 20 Hz. Filtered with highpass of 1 Hz.
+
+
+# Citing
+
+If you use this dataset, be sure to include the following citations:
+
+- Arora, R., Arora, N., and Le Bras, R.: Analyzing Deep Learning Performance for Seismic Waveform Discrimination at Global Distances, EGU General Assembly 2021, online, 19–30 Apr 2021, EGU21-1831, https://doi.org/10.5194/egusphere-egu21-1831, 2021.
+- Storchak, D.A., Harris, J., Brown, L., Lieser, K., Shumba, B., Verney, R., Di Giacomo, D., Korger, E. I. M. (2017). Rebuild of the Bulletin of the International Seismological Centre (ISC), part 1: 1964–1979. Geosci. Lett. (2017) 4: 32, https://doi.org/10.1186/s40562-017-0098-z
+- Storchak, D.A., Harris, J., Brown, L., Lieser, K., Shumba, B., Di Giacomo, D. (2020) Rebuild of the Bulletin of the International Seismological Centre (ISC)—part 2: 1980–2010. Geosci. Lett. 7: 18, https://doi.org/10.1186/s40562-020-00164-6
+
+Include the following in your acknowledgements:
+- The facilities of IRIS Data Services, and specifically the IRIS Data Management Center, were used for access to waveforms, related metadata, and/or derived products used in this study. IRIS Data Services are funded through the Seismological Facilities for the Advancement of Geoscience (SAGE) Award of the National Science Foundation under Cooperative Support Agreement EAR-1851048.
+- All seismic data were downloaded through the IRIS Wilber 3 system (https://ds.iris.edu/wilber3/) or IRIS Web Services (https://service.iris.edu/), including the following seismic networks: (1) the AZ (ANZA; UC San Diego, 1982); (2) the TA (Transportable Array; IRIS, 2003); (3) the US (USNSN, Albuquerque, 1990); (4) the IU (GSN; Albuquerque, 1988)."
+

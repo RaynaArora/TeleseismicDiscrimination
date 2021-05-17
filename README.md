@@ -2,7 +2,8 @@
 Dataset used for Deep Learning Approaches for Teleseismic Discrimination and its Societal Implications
 
 This repository contains the training, validation, and test datasets in Pandas dataframes that have been pickled. The training data is split into 8 files: trainaa, trainab, ... trainag.
-After you download the data please combine the training files into a single pickle file:
+After you download the data, combine the training files into a single pickle file:
+
     cat traina* > train.pic
 
 Below is the python code to unpickle the file.

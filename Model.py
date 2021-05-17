@@ -1,4 +1,4 @@
-# x_train, x_val, and x_test below are arrays of samples from the dataframes in this repository. They have been normalized to a range of -0.5 to 0.5. Dimensions are (6076, 1800, 1), (750, 3600, 1), and (782, 3600, 1).
+# x_train, x_val, and x_test below are arrays of samples from the dataframes in this repository, clipped to a range of 10 seconds before to 80 seconds after the arrival. They have been normalized to a range of -0.5 to 0.5. Dimensions are (6076, 1800, 1), (750, 1800, 1), and (782, 1800, 1).
 # y_train, y_val, and y_test are arrays in which each element is 1 or 0 to represent that the corresponding sample is an explosion or earthquake, respectively.
 
 import pandas as pd

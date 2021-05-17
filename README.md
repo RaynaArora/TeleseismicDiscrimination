@@ -35,9 +35,9 @@ Here are descriptions of the columns in the Pandas dataframes in order:
 - Channel of station which recorded this waveform
 - Seismic Phase Name
 - Distance event was detected at in degrees (1 degree is about 111 km)
-- Is explosion: True if this event was an explosion, false if it was an earthquake. Explosions in this dataset include nuclear explosions, chemical explosions, and mining explosions.
+- Is explosion: True if this event was an explosion, false if it was an earthquake. Explosions in this dataset include nuclear explosions, chemical explosions, and mining explosions. In the rockburst dataframes(rock_train_info, rock_val_info, rock_test_info), this column is always true.
 - SampRate: Please ignore this. All waveforms have been downsampled to 20 Hz.
-- Samples: Length 1800 array of amplitudes in waveform from 10 seconds before to 80 seconds after arrival at station. Sampled at 20 Hz. Filtered with highpass of 1 Hz.
+- Samples: Length 3600 array of amplitudes in waveform from 60 seconds before to 120 seconds after arrival at station. Sampled at 20 Hz. Filtered with highpass of 1 Hz. In data passed to model, this sample array has been clipped to 10 seconds before to 80 seconds after the arrival and the amplitudes have been normalized.
 
 
 # Citing

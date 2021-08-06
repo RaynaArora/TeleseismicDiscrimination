@@ -1,24 +1,17 @@
 # Dataset for Teleseismic Discrimination
-Dataset used for Deep Learning Approaches for Teleseismic Discrimination
+Dataset used for Teleseismic Discrimination Using Deep Learning
 
-This repository contains the training, validation, and test datasets in Pandas dataframes that have been pickled. The training data is split into 8 files: trainaa, trainab, ..., trainag.
-After you download the data, combine the training files into a single pickle file:
+This repository contains the training, validation, and test datasets in Pandas dataframes that have been pickled. Some large files have been split into files with the endings .aa, .ab, etc.
+After you download the data, combine the split files:
 
-    cat traina* > train_info.pic
+    cat df_train.pic.a* > df_train.pic
+    cat x_train.pic.a* > x_train.pic
+    cat df_rock.pic.a* > df_rock.pic
+    cat x_rock.pic.a* > x_rock.pic
 
-Below is the python code to unpickle the file.
-```python
+You can also run the "Collect and Format Data" notebook to newly obtain all the data from the internet and store it in the same pickle files.
 
-import pickle
-
-with open("train_info.pic", "rb") as fp:
-    df_train = pickle.load(fp)
-with open("val_info.pic", "rb") as fp:
-    df_val = pickle.load(fp)
-with open("test_info.pic", "rb") as fp:
-    df_test = pickle.load(fp)
-
-```
+Once the data is combined or you've collected it yourself, run the "Model and Figures" notebook to train and test the proposed model on the data.  The notebook also includes code to generate figures from the results.
 
 Here are descriptions of the columns in the Pandas dataframes in order:
 
@@ -44,7 +37,7 @@ Here are descriptions of the columns in the Pandas dataframes in order:
 
 If you use this dataset, be sure to include the following citations:
 
-- Arora, R., Arora, N., and Le Bras, R.: Analyzing Deep Learning Performance for Seismic Waveform Discrimination at Global Distances, EGU General Assembly 2021, online, 19–30 Apr 2021, EGU21-1831, https://doi.org/10.5194/egusphere-egu21-1831, 2021.
+- Arora, R., Le Bras, R.: TBD
 - Storchak, D.A., Harris, J., Brown, L., Lieser, K., Shumba, B., Verney, R., Di Giacomo, D., Korger, E. I. M. (2017). Rebuild of the Bulletin of the International Seismological Centre (ISC), part 1: 1964–1979. Geosci. Lett. (2017) 4: 32, https://doi.org/10.1186/s40562-017-0098-z
 - Storchak, D.A., Harris, J., Brown, L., Lieser, K., Shumba, B., Di Giacomo, D. (2020) Rebuild of the Bulletin of the International Seismological Centre (ISC)—part 2: 1980–2010. Geosci. Lett. 7: 18, https://doi.org/10.1186/s40562-020-00164-6
 

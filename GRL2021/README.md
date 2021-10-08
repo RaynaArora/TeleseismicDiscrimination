@@ -37,7 +37,7 @@ Here are descriptions of the columns in the Pandas dataframes in order:
 
 If you use this dataset, be sure to include the following citations:
 
-- Arora, R., Le Bras, R.: TBD
+- Arora, R., Le Bras, R. (2021). Teleseismic Discrimination Using Deep Learning. <DOI: TBD>
 - Storchak, D.A., Harris, J., Brown, L., Lieser, K., Shumba, B., Verney, R., Di Giacomo, D., Korger, E. I. M. (2017). Rebuild of the Bulletin of the International Seismological Centre (ISC), part 1: 1964–1979. Geosci. Lett. (2017) 4: 32, https://doi.org/10.1186/s40562-017-0098-z
 - Storchak, D.A., Harris, J., Brown, L., Lieser, K., Shumba, B., Di Giacomo, D. (2020) Rebuild of the Bulletin of the International Seismological Centre (ISC)—part 2: 1980–2010. Geosci. Lett. 7: 18, https://doi.org/10.1186/s40562-020-00164-6
 
